@@ -1,0 +1,38 @@
+/*FOOTER*/
+footer {
+    background: rgb(61,61,61);
+    background: linear-gradient(169deg, rgba(61,61,61,1) 46%, rgba(202,197,211,1) 54%, rgba(9,10,12,1) 69%);
+    margin-top: 20px;
+
+    ul{
+        list-style-type: none;
+        margin-top: 5px;
+        padding: 0;
+    }
+        li{
+            margin: 10px;
+        }
+            a{
+                color: #fff01f;
+                text-decoration: none;
+            }
+
+    .desarrollador {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .ubicacion{
+        padding: 50px;
+    } 
+    
+    .ampliar {
+        transition: all;
+
+        &:hover{
+            transform: scale(1.3);
+        }
+    }
+}

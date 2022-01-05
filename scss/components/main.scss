@@ -1,0 +1,166 @@
+/*Mixin*/
+@mixin margin30 {
+    margin:30px;
+}
+
+/*Extend*/
+%encabezados {
+    color: #3d3d3d;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Map*/
+$encabezados: (
+    h1: 3em,
+    h2: 2.3em,
+    h3: 2em,
+    h4: 1.5em,
+    h5: 1.2em,
+    h6: 1em
+);
+
+$h1:map-get($encabezados, h1);
+
+h1{
+    font-size: $h1;
+}
+
+$h2:map-get($encabezados, h2);
+
+h2{ font-size: $h2;
+}
+
+$h3:map-get($encabezados, h3);
+
+h3{ font-size: $h3;
+    @extend %encabezados;
+}
+
+$h4:map-get($encabezados, h4);
+
+h4{ font-size: $h4;
+}
+
+$h5:map-get($encabezados, h5);
+
+h5{ font-size: $h5;
+}
+
+$h6:map-get($encabezados, h6);
+
+h6{ font-size: $h6;
+}
+
+
+/*SECTION PRINCIPAL*/
+section.principal{
+    @include margin30();
+
+    ul{
+        list-style-type: none;
+    }
+}
+
+/*SECTION SECUNDARIA*/
+.secundaria {
+    @include margin30();
+    text-align: center;
+    font-size: 20px;
+    
+    .card{
+        padding: 10px;
+        box-shadow: 10px 10px 37px 41px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 37px 41px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 37px 41px rgba(0,0,0,0.75);
+    }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    
+    .expandirGirar{
+        background-color: $color-backgroundGrey;
+        padding-top: 12px;
+    
+        &:hover{
+            animation-name: girar;
+            animation-timing-function: ease;
+            animation-duration: 2s;
+
+            @keyframes girar {
+                0%{
+                    transform: scale(1);
+                }
+        
+                25%{
+                    transform: rotate(0.2deg);
+                }
+        
+                50%{
+                    transform: rotate(-0.4deg);
+                }
+        
+                75%{
+                    transform: scale(1.08);
+                }
+        
+                100%{
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+
+/* Cards Btn*/
+.btn-primary{
+    color: #090a0c;
+    background-color: #fff01f;
+    border-color: #3d3d3d;
+    
+    &:hover {
+        color: #fff01f;
+        background-color: #090a0c;
+        border-color: #3d3d3d;
+    }
+}
+
+/* Productos */
+span.carousel-control-next-icon {
+    background-color: black;
+}
+span.carousel-control-prev-icon {
+    background-color: black;
+}
+
+.cardsProductos .card{
+    box-shadow: 1px 1px 23px 9px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 23px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 23px 9px rgba(0,0,0,0.75);
+}
+
+/*Preguntas Frecuentes*/
+.accordion-button{
+    background-color: $color-backgroundGrey;
+    color:black;
+    font-size: 18px;
+
+    &:not(.collapsed){
+        background-color: #b3b5bc;
+        color:black;
+    }
+}
+
+/*Contacto*/
+.pagContacto{
+    input{
+    box-shadow: -1px -1px 9px 0px rgba(255,240,31,0.75);
+    -webkit-box-shadow: -1px -1px 9px 0px rgba(255,240,31,0.75);
+    -moz-box-shadow: -1px -1px 9px 0px rgba(255,240,31,0.75);   
+    }
+    textarea{
+        box-shadow: -1px -1px 9px 0px rgba(255,240,31,0.75);
+    -webkit-box-shadow: -1px -1px 9px 0px rgba(255,240,31,0.75);
+    -moz-box-shadow: -1px -1px 9px 0px rgba(255,240,31,0.75);
+    }
+}

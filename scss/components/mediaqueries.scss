@@ -1,0 +1,43 @@
+/* Media Queries 1235px*/ 
+@media screen and (max-width: 1235px){
+    .carousel-item p{
+        font-size: 10px;
+    }
+}
+
+/* Media Queries 1024px*/ 
+@media screen and (max-width: 1024px){
+    .carousel-item p{
+        font-size: 0px;
+    }
+    
+    .Imgnosotros img{
+        height: 300px;
+    }
+
+    footer{
+        text-align: center;
+    }
+}   
+
+/* Media Queries 768px*/ 
+@media screen and (max-width: 768px){
+    section.principal {
+        margin: 0;
+
+        div.carousel-inner{
+            width: 100%;
+        }
+    }
+}
+header{
+    background: rgb(0,0,0);
+    background: linear-gradient(162deg, rgba(0,0,0,1) 57%, rgba(202,197,211,1) 65%, rgba(61,61,61,1) 69%);
+    }
+
+/* Media Queries 600px*/ 
+@media screen and (max-width: 600px){
+    .Imgnosotros img{
+        width: 90vw;
+    }
+}
