@@ -1,21 +1,23 @@
 /*FOOTER*/
 footer {
-    background: rgb(61,61,61);
-    background: linear-gradient(169deg, rgba(61,61,61,1) 46%, rgba(202,197,211,1) 54%, rgba(9,10,12,1) 69%);
+    background: rgb(61, 61, 61);
+    background: linear-gradient(169deg, rgba(61, 61, 61, 1) 46%, rgba(202, 197, 211, 1) 54%, rgba(9, 10, 12, 1) 69%);
     margin-top: 20px;
 
-    ul{
+    ul {
         list-style-type: none;
         margin-top: 5px;
         padding: 0;
-    }
-        li{
+
+        li {
             margin: 10px;
-        }
-            a{
+
+            a {
                 color: #fff01f;
                 text-decoration: none;
             }
+        }
+    }
 
     .desarrollador {
         display: flex;
@@ -24,14 +26,18 @@ footer {
         text-align: center;
     }
 
-    .ubicacion{
+    .ubicacion {
         padding: 50px;
-    } 
-    
+    }
+
+    iframe {
+        border-radius: 8px;
+    }
+
     .ampliar {
         transition: all;
 
-        &:hover{
+        &:hover {
             transform: scale(1.3);
         }
     }

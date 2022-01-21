@@ -10,20 +10,17 @@ body {
 /*Header*/
 header {
   background: black;
-  background: linear-gradient(162deg, black 39%, #cac5d3 44%, #3d3d3d 48%);
-  position: sticky;
-  top: 0px;
-  z-index: 3; }
+  background: linear-gradient(162deg, black 39%, #cac5d3 44%, #3d3d3d 48%); }
+  header nav ul li {
+    transition: all; }
+    header nav ul li:hover {
+      transform: scale(1.1);
+      background-color: #CAC5D3; }
   header .navbar-light .navbar-nav .nav-link {
     color: #fff01f; }
   header .navbar-light .navbar-toggler {
     background-color: #fff01f;
     border-color: #fff01f; }
-  header nav ul li {
-    transition: all; }
-    header nav ul li:hover {
-      transform: scale(1.1);
-      background-color: #cac5d3; }
 
 /*Mixin*/
 /*Extend*/
@@ -33,7 +30,7 @@ h3 {
 
 /*Map*/
 h1 {
-  font-size: 3em; }
+  font-size: 2.8em; }
 
 h2 {
   font-size: 2.3em; }
@@ -70,7 +67,7 @@ section.principal {
     text-decoration: none;
     color: black; }
   .secundaria .expandirGirar {
-    background-color: #B3B5BC;
+    background-color: #CAC5D3;
     padding-top: 12px; }
     .secundaria .expandirGirar:hover {
       animation-name: girar;
@@ -89,36 +86,46 @@ section.principal {
   100% {
     transform: scale(1); } }
 
-/* Cards Btn*/
-.btn-primary {
-  color: #090a0c;
-  background-color: #fff01f;
-  border-color: #3d3d3d; }
-  .btn-primary:hover {
-    color: #fff01f;
-    background-color: #090a0c;
-    border-color: #3d3d3d; }
-
 /* Productos */
-span.carousel-control-next-icon {
+.productosDestacados button span.carousel-control-next-icon {
   background-color: black; }
 
-span.carousel-control-prev-icon {
+.productosDestacados button span.carousel-control-prev-icon {
   background-color: black; }
+
+.productosDestacados .carousel-caption {
+  color: black; }
 
 .cardsProductos .card {
   box-shadow: 1px 1px 23px 9px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 1px 23px 9px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 1px 23px 9px rgba(0, 0, 0, 0.75); }
+  .cardsProductos .card .btn-primary {
+    color: #090a0c;
+    background-color: #fff01f;
+    border-color: #3d3d3d; }
+    .cardsProductos .card .btn-primary:hover {
+      color: #fff01f;
+      background-color: #090a0c;
+      border-color: #3d3d3d; }
 
 /*Preguntas Frecuentes*/
-.accordion-button {
-  background-color: #B3B5BC;
-  color: black;
-  font-size: 18px; }
-  .accordion-button:not(.collapsed) {
+h2.accordion-header {
+  box-shadow: -1px -1px 9px 0px rgba(255, 240, 31, 0.75);
+  -webkit-box-shadow: -1px -1px 9px 0px rgba(255, 240, 31, 0.75);
+  -moz-box-shadow: -1px -1px 9px 0px rgba(255, 240, 31, 0.75); }
+  h2.accordion-header .accordion-button {
     background-color: #b3b5bc;
-    color: black; }
+    color: black;
+    font-size: 18px; }
+    h2.accordion-header .accordion-button:focus {
+      border-color: #3d3d3d;
+      box-shadow: -1px -1px 10px 2px rgba(61, 61, 61, 0.54);
+      -webkit-box-shadow: -1px -1px 10px 2px rgba(61, 61, 61, 0.54);
+      -moz-box-shadow: -1px -1px 10px 2px rgba(61, 61, 61, 0.54); }
+    h2.accordion-header .accordion-button:not(.collapsed) {
+      background-color: #b3b5bc;
+      color: black; }
 
 /*Contacto*/
 .pagContacto input {
@@ -131,6 +138,19 @@ span.carousel-control-prev-icon {
   -webkit-box-shadow: -1px -1px 9px 0px rgba(255, 240, 31, 0.75);
   -moz-box-shadow: -1px -1px 9px 0px rgba(255, 240, 31, 0.75); }
 
+.pagContacto .form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #3d3d3d;
+  outline: 0;
+  box-shadow: -1px -1px 10px 2px rgba(61, 61, 61, 0.54);
+  -webkit-box-shadow: -1px -1px 10px 2px rgba(61, 61, 61, 0.54);
+  -moz-box-shadow: -1px -1px 10px 2px rgba(61, 61, 61, 0.54); }
+
+/*Nosotros*/
+.imgNosotros img {
+  border-radius: 8px; }
+
 /*FOOTER*/
 footer {
   background: #3d3d3d;
@@ -140,11 +160,11 @@ footer {
     list-style-type: none;
     margin-top: 5px;
     padding: 0; }
-  footer li {
-    margin: 10px; }
-  footer a {
-    color: #fff01f;
-    text-decoration: none; }
+    footer ul li {
+      margin: 10px; }
+      footer ul li a {
+        color: #fff01f;
+        text-decoration: none; }
   footer .desarrollador {
     display: flex;
     justify-content: center;
@@ -152,6 +172,8 @@ footer {
     text-align: center; }
   footer .ubicacion {
     padding: 50px; }
+  footer iframe {
+    border-radius: 8px; }
   footer .ampliar {
     transition: all; }
     footer .ampliar:hover {
@@ -175,14 +197,28 @@ footer {
 @media screen and (max-width: 768px) {
   section.principal {
     margin: 0; }
-    section.principal div.carousel-inner {
-      width: 100%; } }
-
-header {
-  background: black;
-  background: linear-gradient(162deg, black 57%, #cac5d3 65%, #3d3d3d 69%); }
+    section.principal div.carousel-inner img {
+      min-height: 150px; }
+    section.principal ul {
+      margin: 30px;
+      padding: 0; }
+  .reverse {
+    flex-direction: column-reverse; }
+  header {
+    background: black;
+    background: linear-gradient(162deg, black 60%, #cac5d3 65%, #3d3d3d 69%); } }
 
 /* Media Queries 600px*/
 @media screen and (max-width: 600px) {
   .Imgnosotros img {
     width: 90vw; } }
+
+/* Media Queries 440px*/
+@media screen and (max-width: 440px) {
+  nav img {
+    max-width: 125px; } }
+
+/* Media Queries 350px*/
+@media screen and (max-width: 350px) {
+  nav img {
+    max-width: 105px; } }

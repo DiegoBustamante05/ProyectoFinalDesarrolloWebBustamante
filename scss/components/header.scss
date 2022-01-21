@@ -1,10 +1,20 @@
 /*Header*/
 header {
-    background: rgb(0,0,0);
-    background: linear-gradient(162deg, rgba(0,0,0,1) 39%, rgba(202,197,211,1) 44%, rgba(61,61,61,1) 48%);
-    position: sticky;
-    top: 0px;
-    z-index: 3;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(162deg, rgba(0, 0, 0, 1) 39%, rgba(202, 197, 211, 1) 44%, rgba(61, 61, 61, 1) 48%);
+
+    nav {
+        ul {
+            li {
+                transition: all;
+
+                &:hover {
+                    transform: scale(1.1);
+                    background-color: $color-backgroundGrey;
+                }
+            }
+        }
+    }
 
     .navbar-light .navbar-nav .nav-link {
         color: #fff01f;
@@ -13,18 +23,5 @@ header {
     .navbar-light .navbar-toggler {
         background-color: #fff01f;
         border-color: #fff01f;
-    }
-
-    nav {
-        ul{
-            li{
-                transition: all;
-                
-                &:hover{
-                    transform: scale(1.1);
-                    background-color: #cac5d3;
-                }
-            }
-        }
     }
 }
